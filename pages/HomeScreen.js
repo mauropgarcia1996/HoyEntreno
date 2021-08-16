@@ -1,13 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import {
   ScrollView,
-  StatusBar,
   Text,
   View,
-  Button,
-  Image,
   StyleSheet,
-  SafeAreaView,
   FlatList,
 } from 'react-native';
 import ScheduleItem from '../components/home/ScheduleItem';
@@ -26,12 +22,12 @@ const HomeScreen = params => {
               <View style={styles.item}></View>
             ))}
           </View>
-        </View>
+        </View> 
         <View style={{paddingHorizontal: 20, paddingTop: 20}}>
           <Text style={styles.textHeading}>Agenda</Text>
           <View>
-            {[0, 1, 2].map(e => (
-              <ScheduleItem />
+            {[0, 1, 2].map((e, i) => (
+              <ScheduleItem key={"ScheduleItem_" + i} />
             ))}
           </View>
         </View>
